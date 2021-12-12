@@ -1,0 +1,24 @@
+{
+  "name": "homework-12",
+  "version": "1.0.0",
+  "description": "This is a command line application designed to be used as an employee management system. As a user of the application I can create employee profiles with their first and last name and manager. You can choose which department the employee is to be assigned to as well as their role in that department.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/letqin/homework-12.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/letqin/homework-12/issues"
+  },
+  "homepage": "https://github.com/letqin/homework-12#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.0"
+  }
+}
