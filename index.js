@@ -1,10 +1,12 @@
 const inquirer = require("inquirer");
-const db = require("./db");
+const db = require("./db/connection");
 require("console.table");
 
+// declare arrays for the database information
 
 function promptUser() {
-    inquirer
+    inquirer 
+      // initial set of questions for the user
     .prompt([
         {
         type: 'list',
@@ -21,7 +23,7 @@ function promptUser() {
         ],
         },
     ])
-
+    // second menu based on initial command
     .then((answers) => {
         switch (answers.options) {
         case 'view all employees':
@@ -51,5 +53,8 @@ function promptUser() {
     })
 }
 
+// functions to perform the specified command
+
+const get
 
 promptUser();
