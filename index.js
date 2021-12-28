@@ -1,8 +1,13 @@
+const { prompts } = require("inquirer");
 const inquirer = require("inquirer");
 const db = require("./db/connection");
 require("console.table");
 
 // declare arrays for the database information
+let depts = [];
+let roles = [];
+let managers = [ {name: "None", value: "NULL"} ];
+let positions = [];
 
 function promptUser() {
     inquirer 
@@ -55,6 +60,25 @@ function promptUser() {
 
 // functions to perform the specified command
 
-const get
+const getDepartments = () => {
+    db.query(`SELECT * FROM department`, (err, results) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.table(results);
+            prompts();
+        }
+    })
+}
+
+const getEmployees = () => {
+    db.query(`SELECT id,
+    concat(employee.first_name, " ", employee.last_name) AS full_name
+    FROM employee`, (err, results) => {
+        results.forEach(e => {
+            employees.push({name: e.full_name, })
+        })
+    })
+}
 
 promptUser();
